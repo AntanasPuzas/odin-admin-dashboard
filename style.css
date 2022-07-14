@@ -4,6 +4,7 @@
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /* TEMPORARY? */
@@ -136,4 +137,45 @@ h2 {
 .main-content {
     grid-area: main;
     background-color: #e2e8f0;
+    display: grid;
+    grid-template: 1fr 1fr / 3fr 1fr;
+    gap: 15px;
+    padding: 15px;
+}
+
+.main-content .projects {
+    grid-area: 1 / 1 / -1 / 2;
+}
+
+.main-content .announcements>div,
+.main-content .trending>div {
+    background-color: white;
+    padding: 0 25px;
+    border-radius: 7px;
+    margin-top: 10px;
+}
+
+.main-content .announcements>div>div {
+    padding: 25px 0;
+}
+
+.main-content .trending>div {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 25px 25px;
+}
+
+.main-content .trending>div>div {
+    display: grid;
+    grid-template: auto 1fr / 1fr 3fr;
+    place-items: center;
+}
+
+.main-content .treding img {
+    grid-area: 1 / 1 / -1 / 2;
+}
+
+.main-content .trending p {
+    font-size: 0.8rem;
 }
