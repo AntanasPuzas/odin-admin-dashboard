@@ -41,7 +41,7 @@ h5 {
     grid-template-areas:
         "sidebar header"
         "sidebar main";
-    grid-template-columns: min(225px, 20%) 2fr;
+    grid-template-columns: min(225px, 30%) 1fr;
     grid-template-rows: auto 1fr;
     height: 100%;
 }
