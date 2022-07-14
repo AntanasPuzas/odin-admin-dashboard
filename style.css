@@ -99,19 +99,20 @@ h2 {
     grid-area: sidebar;
     background-color: #1992d4;
     color: white;
+    padding: 4px 65px 0 15px;
 }
 
 .sidebar .logo {
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
-    margin: 0 50px 45px 10px;
+    margin-bottom: 45px;
 }
 
 .sidebar .logo>svg {
     width: 48px;
-    height: 48px;
     justify-self: end;
+    margin-left: -5px;
 }
 
 .sidebar ul {
@@ -122,7 +123,7 @@ h2 {
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
-    margin: 0 0 15px 15px;
+    margin-bottom: 15px;
 }
 
 .sidebar ul li svg {
@@ -147,12 +148,59 @@ h2 {
     grid-area: 1 / 1 / -1 / 2;
 }
 
+.main-content .projects>div {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(auto-fill, minmax(275px, 1fr));
+    gap: 15px;
+}
+
+.main-content .announcements>div,
+.main-content .trending>div,
+.main-content .projects>div {
+    margin-top: 10px;
+}
+
 .main-content .announcements>div,
 .main-content .trending>div {
     background-color: white;
     padding: 0 25px;
     border-radius: 7px;
+}
+
+.main-content .projects .card {
+    display: grid;
+    grid-template-columns: 5px / 1fr;
+    background-color: white;
+    border-radius: 7px;
+}
+
+.main-content .projects .card>div:not(.color) {
+    padding: 25px 25px;
+    display: grid;
+    grid-template: auto auto 1fr / 1fr;
+}
+
+.main-content .projects .card>div>div {
+    justify-self: end;
+    align-self: end;
     margin-top: 10px;
+}
+
+.main-content .projects .card .color {
+    grid-area: 1 / 1 / -1 / 2;
+    width: 5px;
+    background-color: orange;
+    border-radius: 5px 0 0 5px; 
+}
+
+.main-content .projects .card>h4,
+.main-content .projects .card>p,
+.main-content .projects .card>div:not(.color) {
+    grid-column: 2;
+}
+
+.main-content .projects .card>div {
+    justify-self: end;    
 }
 
 .main-content .announcements>div>div {
